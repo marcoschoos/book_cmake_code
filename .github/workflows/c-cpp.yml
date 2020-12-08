@@ -6,13 +6,13 @@ jobs:
   build:
         
     name: ${{ matrix.name }}
-    runs-on: ${{ matrix.config.os }} # будет запускаться по очереди на всех типах машин
+    runs-on: ${{ matrix.os }} # будет запускаться по очереди на всех типах машин
     strategy:
       fail-fast: false
-      matrix:
-        config: 
-          - {name:windows, os:windows_latest}
-          - {name:ubuntu, os:ubuntu_latest}
+      matrix: 
+        name: ["windows", "ubuntu"] 
+        os: [windows_latest,ubuntu_latest]
+
     steps:    
     - uses: actions/checkout@v2
     - name: build
