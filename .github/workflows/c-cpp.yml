@@ -8,7 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: cd
-      run: cd Kapitel_2/Beispiel_1/
-    - name: cmake
-      run: cmake .
+    - name: build
+      run: |
+        cd Kapitel_2/Beispiel_1/
+        cmake .
+        make .
+        ./cmake_tutorial_02
