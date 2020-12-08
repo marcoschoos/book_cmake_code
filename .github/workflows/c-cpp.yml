@@ -12,5 +12,5 @@ jobs:
       run: |
         cd Kapitel_2/Beispiel_1/
         cmake .
-        make .
+        make 
         ./cmake_tutorial_02
