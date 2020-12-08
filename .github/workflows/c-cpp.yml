@@ -1,0 +1,49 @@
+name: CMake Build Matrix
+
+on: [push]
+
+jobs:
+  build:
+    name: ${ { matrix.config.name } }
+    runs-on: ${ { matrix.config.os } }
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+        - {
+            name: "Windows Latest MSVC", artifact: "Windows-MSVC.tar.xz",
+            os: windows-latest,
+            build_type: "Release", cc: "cl", cxx: "cl",
+            environment_script: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Auxiliary/Build/vcvars64.bat"
+          }
+        - {
+            name: "Windows Latest MinGW", artifact: "Windows-MinGW.tar.xz",
+            os: windows-latest,
+            build_type: "Release", cc: "gcc", cxx: "g++"
+          }
+        - {
+            name: "Ubuntu Latest GCC", artifact: "Linux.tar.xz",
+            os: ubuntu-latest,
+            build_type: "Release", cc: "gcc", cxx: "g++"
+          }
+        - {
+            name: "macOS Latest Clang", artifact: "macOS.tar.xz",
+            os: macos-latest,
+            build_type: "Release", cc: "clang", cxx: "clang++"
+          }
+    steps:
+    - uses: actions/checkout@v1
+    
+    - name: Build_2_1
+      run: |
+        execute_process(
+          COMMAND cd Kapitel_2/Beispiel_1/
+          COMMAND cmake .
+          COMMAND cmake --build build
+        )
+        if (NOT result EQUAL 0)
+          string(REGEX MATCH "FAILED:.*$" error_message "${output}")
+          string(REPLACE "\n" "%0A" error_message "${error_message}")
+          message("::error::${error_message}")
+          message(FATAL_ERROR "Build failed")
+        endif()
