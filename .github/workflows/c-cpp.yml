@@ -41,5 +41,4 @@ jobs:
         mkdir build
         cd build
         cmake ..
-        ls -l 
         cmake --build .
