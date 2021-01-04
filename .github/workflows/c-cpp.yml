@@ -34,9 +34,30 @@ jobs:
           }
 
     steps:    
+    - id: code_3.1
     - uses: actions/checkout@v2
-    - name: build_kap_bsp_1
-      working-directory: Kapitel_2/Beispiel_1/
+    - name: build_code_3.1
+      working-directory: Kapitel_3/Code_3.1/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - id: code_3.2
+    - uses: actions/checkout@v2
+    - name: build_code_3.2
+      working-directory: Kapitel_3/Code_3.2/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - id: code_3.5
+    - uses: actions/checkout@v2
+    - name: build_code_3.5
+      working-directory: Kapitel_3/Code_3.5/
       run: |
         mkdir build
         cd build
