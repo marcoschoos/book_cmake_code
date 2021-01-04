@@ -42,8 +42,8 @@ jobs:
         cd build
         cmake ..
         cmake --build .
-        
-    - uses: actions/checkout@v2
+
+    - uses: actions/checkout@v2  
     - name: build_code_3.2
       working-directory: Kapitel_3/Code_3.2/
       run: |
@@ -52,7 +52,7 @@ jobs:
         cmake ..
         cmake --build .
         
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
     - name: build_code_3.5
       working-directory: Kapitel_3/Code_3.5/
       run: |
