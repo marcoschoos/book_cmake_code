@@ -34,7 +34,6 @@ jobs:
           }
 
     steps:    
-    - id: code_3.1
     - uses: actions/checkout@v2
     - name: build_code_3.1
       working-directory: Kapitel_3/Code_3.1/
@@ -44,7 +43,6 @@ jobs:
         cmake ..
         cmake --build .
         
-    - id: code_3.2
     - uses: actions/checkout@v2
     - name: build_code_3.2
       working-directory: Kapitel_3/Code_3.2/
@@ -54,8 +52,7 @@ jobs:
         cmake ..
         cmake --build .
         
-    - id: code_3.5
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
     - name: build_code_3.5
       working-directory: Kapitel_3/Code_3.5/
       run: |
