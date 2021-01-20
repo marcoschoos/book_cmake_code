@@ -9,7 +9,7 @@ cmake_minimum_required(VERSION 3.5)
 # wird das LANGUAGES Keyword verwendet, um CMake 
 # nicht unnoetig nach einem C Compiler suchen zu 
 # lassen
-project(hello_world_project 
+project(code_3-2 
     LANGUAGES CXX  # CXX -> C++
     )
 

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(hello_world_project 
+project(code_4-2 
     LANGUAGES CXX
     )
     

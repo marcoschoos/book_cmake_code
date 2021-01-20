@@ -4,7 +4,7 @@ if (${CMAKE_VERSION} VERSION_LESS 3.12)
     cmake_policy(VERSION ${CMAKE_VERSION})
 endif()
 
-project(hello_world_project
+project(code_4-4
     LANGUAGES CXX
     VERSION 1.0.0
     )
