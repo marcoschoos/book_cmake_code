@@ -1,0 +1,3 @@
+[submodule "Kapitel_4/Code_4.6/libs/Catch2"]
+	path = Kapitel_4/Code_4.6/libs/Catch2
+	url = https://github.com/catchorg/Catch2

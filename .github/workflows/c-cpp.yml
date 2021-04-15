@@ -90,3 +90,11 @@ jobs:
         cd build
         cmake ..
         cmake --build .
+    
+    - name: build_code_6.1
+      working-directory: Kapitel_6/Code_6.1/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
