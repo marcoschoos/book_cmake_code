@@ -35,6 +35,8 @@ jobs:
 
     steps:    
     - uses: actions/checkout@v2
+      with:
+        submodules: recursive
     - name: build_code_3.1
       working-directory: Kapitel_3/Code_3.1/
       run: |
