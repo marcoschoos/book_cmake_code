@@ -90,9 +90,110 @@ jobs:
         cd build
         cmake ..
         cmake --build .
+        
+    - name: build_code_4.5
+      working-directory: Kapitel_4/Code_4.5/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_4.6
+      working-directory: Kapitel_4/Code_4.6/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_4.7
+      working-directory: Kapitel_4/Code_4.7/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_4.8
+      working-directory: Kapitel_4/Code_4.8/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_5.1
+      working-directory: Kapitel_5/Code_5.1/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_5.2
+      working-directory: Kapitel_5/Code_5.2/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_5.3
+      working-directory: Kapitel_4/Code_5.3/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
     
     - name: build_code_6.1
       working-directory: Kapitel_6/Code_6.1/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_7.1
+      working-directory: Kapitel_7/Code_7.1/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_7.2
+      working-directory: Kapitel_7/Code_7.2/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_7.3
+      working-directory: Kapitel_7/Code_7.3/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+    - name: build_code_8.1
+      working-directory: Kapitel_8/Code_8.1/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+    - name: build_code_9.1
+      working-directory: Kapitel_9/Code_9.1/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+            - name: build_code_9.2
+      working-directory: Kapitel_9/Code_9.2/
       run: |
         mkdir build
         cd build

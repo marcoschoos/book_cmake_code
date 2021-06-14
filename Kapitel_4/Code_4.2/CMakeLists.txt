@@ -5,7 +5,7 @@ project(code_4-2
     )
     
 set(BUILD_EXECUTABLE TRUE CACHE BOOL 
-    "Falls true, wird eine zweite ausführbare Datei erzeugt"
+    "Erzeugt ein zweite ausfuehrbare Datei"
     ) 
 
 add_executable(hello_world main.cpp)

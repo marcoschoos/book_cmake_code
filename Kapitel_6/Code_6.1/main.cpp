@@ -14,7 +14,19 @@ int main()
 {
     auto startzeit = std::chrono::high_resolution_clock::now();
 
-    for (size_t i = 0; i < 5000000; i++) {
+    for (size_t i = 0; i < 1e7; i++) {
+        mathe_funktion(i);
+    }
+    for (size_t i = 0; i < 1e7; i++) {
+        mathe_funktion(i);
+    }
+    for (size_t i = 0; i < 1e7; i++) {
+        mathe_funktion(i);
+    }
+    for (size_t i = 0; i < 1e7; i++) {
+        mathe_funktion(i);
+    }
+    for (size_t i = 0; i < 1e7; i++) {
         mathe_funktion(i);
     }
 
