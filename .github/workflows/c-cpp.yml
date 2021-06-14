@@ -178,6 +178,7 @@ jobs:
         cd build
         cmake ..
         cmake --build .
+        
     - name: build_code_8.1
       working-directory: Kapitel_8/Code_8.1/
       run: |
@@ -185,6 +186,7 @@ jobs:
         cd build
         cmake ..
         cmake --build .
+        
     - name: build_code_9.1
       working-directory: Kapitel_9/Code_9.1/
       run: |
@@ -192,7 +194,8 @@ jobs:
         cd build
         cmake ..
         cmake --build .
-            - name: build_code_9.2
+        
+    - name: build_code_9.2
       working-directory: Kapitel_9/Code_9.2/
       run: |
         mkdir build
