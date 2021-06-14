@@ -27,7 +27,7 @@ void Stadt::ausgabe_ew()
     }
 
     Schaetzer schaetzer;
-    int einwohner_geschaetzt = std::round(schaetzer.schaetze_einwohner(wohnflaeche_gesamt));
+    auto einwohner_geschaetzt = std::round(schaetzer.schaetze_einwohner(wohnflaeche_gesamt));
 
     std::cout << "Die geschätzte Einwohnerzahl in der Stadt beträgt " << einwohner_geschaetzt
               << " Einwohner (gerundet).\n";
