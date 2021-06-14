@@ -142,7 +142,7 @@ jobs:
         cmake --build .
         
     - name: build_code_5.3
-      working-directory: Kapitel_4/Code_5.3/
+      working-directory: Kapitel_5/Code_5.3/
       run: |
         mkdir build
         cd build
