@@ -4,7 +4,7 @@ project(code_5-3
     	LANGUAGES CXX
 )
 
-set(WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 
 add_library(main_bib 
     SHARED src/main_bib/main_bib.cpp)
