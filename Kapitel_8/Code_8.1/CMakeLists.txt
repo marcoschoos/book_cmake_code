@@ -17,7 +17,13 @@ target_compile_definitions(cpp17_exe
     PRIVATE PRINT
     )
 
-target_compile_options(cpp17_exe
-    PRIVATE -Wunused
-    )
+if(MSVC) 
+    target_compile_options(cpp17_exe
+        PRIVATE -W4
+        )
+else()
+    target_compile_options(cpp17_exe
+        PRIVATE -Wunused
+        )
+endif()
 
