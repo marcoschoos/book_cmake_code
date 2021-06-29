@@ -14,13 +14,9 @@ jobs:
         - {
             name: "Windows Latest MSVC", artifact: "Windows-MSVC.7z",
             os: windows-latest,
-            cc: "cl", cxx: "cl",
+            cc: "cl", 
+            cxx: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/MSVC/14.29.30037/bin/Hostx64/x64/cl.exe",
             environment_script: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Auxiliary/Build/vcvars64.bat"
-          }
-        - {
-            name: "Windows Latest MinGW", artifact: "Windows-MinGW.7z",
-            os: windows-latest,
-            cc: "gcc", cxx: "g++"
           }
         - {
             name: "Ubuntu Latest GCC", artifact: "Linux.7z",
