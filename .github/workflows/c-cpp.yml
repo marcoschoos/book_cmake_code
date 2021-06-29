@@ -14,8 +14,7 @@ jobs:
         - {
             name: "Windows Latest MSVC", artifact: "Windows-MSVC.7z",
             os: windows-latest,
-            cc: "cl", 
-            cxx: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/MSVC/14.29.30037/bin/Hostx64/x64/cl.exe",
+            cc: "cl", cxx: "cl",
             environment_script: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Auxiliary/Build/vcvars64.bat"
           }
         - {
@@ -38,7 +37,7 @@ jobs:
       run: |
         mkdir build
         cd build
-        CXX="${{matrix.config.cxx}}" cmake ..
+        cmake ..
         cmake --build .
 
     - name: build_code_3.2
