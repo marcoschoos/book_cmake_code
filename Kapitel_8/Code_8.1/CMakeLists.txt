@@ -18,6 +18,6 @@ target_compile_definitions(cpp17_exe
     )
 
 target_compile_options(cpp17_exe
-    PRIVATE -Wall
+    PRIVATE -Wunused
     )
 
