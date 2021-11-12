@@ -220,8 +220,10 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake ..
+        cmake -DBoost_LIBRARY_DIRS="${{steps.install-boost.outputs.BOOST_ROOT}}/lib" ..
         cmake --build .
+      env:
+        BOOST_ROOT: ${{ steps.install-boost.outputs.BOOST_ROOT }}
     
     - name: build_code_10.1
       working-directory: Kapitel_10/Code_10.1/
