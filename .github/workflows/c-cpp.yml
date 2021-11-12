@@ -241,7 +241,6 @@ jobs:
         cd build
         cmake ..
         cmake --build .
-        ctest
         
     - name: build_code_10.3
       working-directory: Kapitel_10/Code_10.3/
