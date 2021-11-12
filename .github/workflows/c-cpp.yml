@@ -199,3 +199,64 @@ jobs:
         cd build
         cmake ..
         cmake --build .
+        
+    - name: build_code_9.3
+      working-directory: Kapitel_9/Code_9.3/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_9.4
+      working-directory: Kapitel_9/Code_9.4/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+    
+    - name: build_code_10.1
+      working-directory: Kapitel_10/Code_10.1/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        ctest
+        
+    - name: build_code_10.2
+      working-directory: Kapitel_10/Code_10.2/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        ctest
+        
+    - name: build_code_10.3
+      working-directory: Kapitel_10/Code_10.3/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        ctest
+        
+    - name: build_code_10.4
+      working-directory: Kapitel_10/Code_10.4/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        ctest
+        
+    - name: build_code_10.5
+      working-directory: Kapitel_10/Code_10.5/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        ctest

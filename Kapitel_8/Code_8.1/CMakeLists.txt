@@ -23,7 +23,7 @@ if(MSVC)
         )
 else()
     target_compile_options(cpp17_exe
-        PRIVATE -Wunused
+        PRIVATE -Wall
         )
 endif()
 
