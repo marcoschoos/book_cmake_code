@@ -210,6 +210,10 @@ jobs:
         
     - name: build_code_9.4
       working-directory: Kapitel_9/Code_9.4/
+      uses: MarkusJx/install-boost@v2.0.0
+      id: install-boost
+      with:
+        boost_version: 1.73.0
       run: |
         mkdir build
         cd build
