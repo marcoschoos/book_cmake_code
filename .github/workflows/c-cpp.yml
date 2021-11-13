@@ -39,6 +39,11 @@ jobs:
       with:
         boost_version: 1.73.0
         
+    - name: Install OpenCV
+      uses: Dovyski/setup-opencv-action@v1
+      with:
+        opencv-version: '4.0.0'
+        
     - name: build_code_3.1
       working-directory: Kapitel_3/Code_3.1/
       run: |
