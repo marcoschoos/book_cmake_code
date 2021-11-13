@@ -232,7 +232,7 @@ jobs:
         cd build
         cmake ..
         cmake --build .
-        ctest
+        ctest -C Debug
         
     - name: build_code_10.2
       working-directory: Kapitel_10/Code_10.2/
@@ -249,7 +249,7 @@ jobs:
         cd build
         cmake ..
         cmake --build .
-        ctest
+        ctest -C Debug
         
     - name: build_code_10.4
       working-directory: Kapitel_10/Code_10.4/
@@ -258,7 +258,7 @@ jobs:
         cd build
         cmake ..
         cmake --build .
-        ctest
+        ctest -C Debug
         
     - name: build_code_10.5
       working-directory: Kapitel_10/Code_10.5/
@@ -267,4 +267,4 @@ jobs:
         cd build
         cmake ..
         cmake --build .
-        ctest
+        ctest -C Debug
