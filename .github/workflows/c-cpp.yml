@@ -220,7 +220,7 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake -DBoost_LIBRARY_DIRS="${{steps.install-boost.outputs.BOOST_ROOT}}/lib" ..
+        cmake -DBoost_COMPILER=-vc141 -DBoost_LIBRARY_DIRS="${{steps.install-boost.outputs.BOOST_ROOT}}/lib" ..
         cmake --build .
       env:
         BOOST_ROOT: ${{ steps.install-boost.outputs.BOOST_ROOT }}
