@@ -28,6 +28,8 @@ if(${BUILD_TESTING})
           gtest_main)
 
   if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Windows")
+      target_compile_options(mathe
+          PRIVATE -MDd)
       target_compile_options(test_addieren
           PRIVATE -MDd)
   endif()
