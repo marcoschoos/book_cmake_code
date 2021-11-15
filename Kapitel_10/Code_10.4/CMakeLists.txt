@@ -22,6 +22,11 @@ if(${BUILD_TESTING})
 
   add_executable(test_addieren test/tst_addieren.cpp)
 
+  if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Windows")
+      target_compile_options(test_addieren
+          PRIVATE -MT)
+  endif()
+
   target_link_libraries(test_addieren
       PRIVATE
           mathe
