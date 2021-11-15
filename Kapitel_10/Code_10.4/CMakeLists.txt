@@ -24,7 +24,7 @@ if(${BUILD_TESTING})
 
   if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Windows")
       target_compile_options(test_addieren
-          PRIVATE -MT)
+          PRIVATE -MTd)
   endif()
 
   target_link_libraries(test_addieren
