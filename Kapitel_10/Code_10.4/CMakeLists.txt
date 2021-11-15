@@ -22,15 +22,15 @@ if(${BUILD_TESTING})
 
   add_executable(test_addieren test/tst_addieren.cpp)
 
-  if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Windows")
-      target_compile_options(test_addieren
-          PRIVATE -MTd)
-  endif()
-
   target_link_libraries(test_addieren
       PRIVATE
           mathe
           gtest_main)
+
+  if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Windows")
+      target_compile_options(test_addieren
+          PRIVATE -MDd)
+  endif()
   
   include(GoogleTest)
   gtest_discover_tests(test_addieren)
