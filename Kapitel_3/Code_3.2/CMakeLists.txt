@@ -3,7 +3,7 @@
 # Beispiele eine hoehere CMake Version notwendig, so 
 # das wir an dieser Stelle auch eine etwas neuere 
 # CMake Version erwarten
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.7)
 
 # Da lediglich C++ in diesem Projekt verwendet wird,
 # wird das LANGUAGES Keyword verwendet, um CMake 
