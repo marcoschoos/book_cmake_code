@@ -16,22 +16,29 @@ jobs:
             os: windows-latest,
             cc: "cl", cxx: "cl",
             environment_script: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Auxiliary/Build/vcvars64.bat"
+            doxygen-install: choco install doxygen.install
           }
         - {
             name: "Ubuntu Latest GCC", artifact: "Linux.7z",
             os: ubuntu-latest,
             cc: "gcc", cxx: "g++"
+            doxygen-install: sudo apt-get install doxygen
           }
         - {
             name: "macOS Latest Clang", artifact: "macOS.7z",
             os: macos-latest,
             cc: "clang", cxx: "clang++"
+            doxygen-install: brew install doxygen
           }
 
     steps:    
     - uses: actions/checkout@v2
       with:
         submodules: recursive
+    
+    - name: Install doxygen
+      run: |
+        ${{ matrix.config.doxygen-install }}
         
     - name: Install boost
       uses: MarkusJx/install-boost@v2.0.0
@@ -268,3 +275,27 @@ jobs:
         cmake ..
         cmake --build .
         ctest -C Debug
+        
+    - name: build_code_11.1
+      working-directory: Kapitel_11/Code_11.1/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_11.2
+      working-directory: Kapitel_11/Code_11.2/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_11.3
+      working-directory: Kapitel_11/Code_11.3/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
