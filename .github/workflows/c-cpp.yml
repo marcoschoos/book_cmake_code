@@ -283,7 +283,8 @@ jobs:
         cd build
         cmake ..
         cmake --build .
-        
+        cmake --build . --target erstelle_doku
+                
     - name: build_code_11.2
       working-directory: Kapitel_11/Code_11.2/
       run: |
