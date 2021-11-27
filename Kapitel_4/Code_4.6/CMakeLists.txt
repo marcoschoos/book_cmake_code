@@ -1,6 +1,6 @@
 function(erstelle_test TESTNAME)
     message("Anzahl Argumente ${ARGC}")
-    message("Uebergebene Argumente ${ARGV}")
+    message("Übergebene Argumente ${ARGV}")
     
     add_executable(${TESTNAME} ${ARGN})
     

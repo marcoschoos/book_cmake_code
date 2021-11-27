@@ -11,7 +11,7 @@ check_cxx_source_compiles(
 "#include <iostream>
 int main()
 {
-    std::cout << 'Hello World!' << std::endl;
+    std::cout << \"Hello World!\" << std::endl;
     return 0;
 }" 
 CodeTest1)
@@ -19,7 +19,7 @@ CodeTest1)
 check_cxx_source_compiles(
 "int main()
 {
-    std::cout << 'Hello World!' << std::endl;
+    std::cout << \"Hello World!\" << std::endl;
     return 0;
 }" 
 CodeTest2)

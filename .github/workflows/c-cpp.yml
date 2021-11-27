@@ -126,14 +126,6 @@ jobs:
         cmake ..
         cmake --build .
         
-    - name: build_code_4.8
-      working-directory: Kapitel_4/Code_4.8/
-      run: |
-        mkdir build
-        cd build
-        cmake ..
-        cmake --build .
-        
     - name: build_code_5.1
       working-directory: Kapitel_5/Code_5.1/
       run: |

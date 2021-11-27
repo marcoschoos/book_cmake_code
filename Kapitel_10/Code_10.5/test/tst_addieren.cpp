@@ -3,7 +3,7 @@
 
 #include "mathe.h"
 
-TEST_CASE("Rechtecksflaeche berechnen", "[flaeche]")
+TEST_CASE("Rechtecksfläche berechnen", "[flaeche]")
 {
     Mathe mathe;
 

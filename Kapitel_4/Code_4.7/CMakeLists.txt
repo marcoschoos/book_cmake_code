@@ -1,7 +1,7 @@
 function(erstelle_test)
 
     message("Anzahl Argumente ${ARGC}")
-    message("Uebergebene Argumente ${ARGV}")
+    message("Übergebene Argumente ${ARGV}")
 
     set(PRAEFIX ARG)
     set(BOOLS CHECK)

@@ -12,3 +12,6 @@
 	path = Kapitel_10/Code_10.5/libs/Catch2
 	url = https://github.com/catchorg/Catch2
 	branch = v2.x
+[submodule "Kapitel_9/Code_9.5/libs/GSL"]
+	path = Kapitel_9/Code_9.5/libs/GSL
+	url = https://github.com/microsoft/GSL
