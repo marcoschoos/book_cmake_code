@@ -19,7 +19,7 @@ target_compile_definitions(cpp17_exe
 
 if(MSVC) 
     target_compile_options(cpp17_exe
-        PRIVATE -W4
+        PRIVATE /W4
         )
 else()
     target_compile_options(cpp17_exe

@@ -7,7 +7,11 @@ project(code_9-3
 include(CMakePrintHelpers)
 include(CheckCXXSourceCompiles)
 
-set(CMAKE_REQUIRED_FLAGS "-std=c++17")
+if(MSVC)
+    set(CMAKE_REQUIRED_FLAGS "/std:c++17")
+else()
+    set(CMAKE_REQUIRED_FLAGS "-std=c++17")
+endif()
 
 check_cxx_source_compiles(
 "int main()
