@@ -7,6 +7,7 @@ project(code_4-1
     
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(SOURCES main.cpp hello_world_printer.cpp) 
 set(NAME_EXECUTABLE hello_world)
