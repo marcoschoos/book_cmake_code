@@ -68,7 +68,7 @@ jobs:
         mkdir build
         cd build
         cmake ..
-        cmake --build .
+        cmake --build . -t hello_world
     
     - name: build_code_4.1
       working-directory: Kapitel_4/Code_4.1/
