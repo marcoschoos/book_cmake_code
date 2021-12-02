@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.7)
+cmake_minimum_required(VERSION 3.8...3.19)
 
 project(code_8-1 
     LANGUAGES CXX
@@ -6,6 +6,7 @@ project(code_8-1
     
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(cpp17_exe main.cpp)
 

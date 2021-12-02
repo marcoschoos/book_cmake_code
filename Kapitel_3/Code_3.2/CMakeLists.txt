@@ -13,4 +13,6 @@ project(code_3-2
     LANGUAGES CXX  # CXX -> C++
     )
 
+# Erzeugen der ausführbaren Datei hello_world 
+# aus der Soure Datei main.cpp
 add_executable(hello_world main.cpp)

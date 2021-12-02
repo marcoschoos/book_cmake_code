@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.14...3.19)
 
 project(code_10-4
     	LANGUAGES CXX
@@ -8,6 +8,7 @@ include(CTest)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_library(mathe 
     STATIC src/mathe.cpp

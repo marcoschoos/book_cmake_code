@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.7)
+cmake_minimum_required(VERSION 3.7...3.19)
 
 project(code_4-3
     LANGUAGES CXX
@@ -6,6 +6,7 @@ project(code_4-3
     )
  
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(hello_world main.cpp)
 add_executable(hello_world_2 main.cpp)

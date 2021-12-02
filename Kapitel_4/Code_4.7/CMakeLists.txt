@@ -30,7 +30,7 @@ function(erstelle_test)
     message("CHECK ist: ${ARG_CHECK}")
 endfunction()
 
-cmake_minimum_required(VERSION 3.7)
+cmake_minimum_required(VERSION 3.7...3.19)
 
 project(code_4-7
     	LANGUAGES CXX
