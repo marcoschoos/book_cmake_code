@@ -28,12 +28,12 @@ if(${BUILD_TESTING})
           mathe
           gtest_main)
 
-  if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Windows")
-      target_compile_options(mathe
-          PRIVATE -MTd)
-      target_compile_options(test_addieren
-          PRIVATE -MTd)
-  endif()
+  #if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Windows")
+  #    target_compile_options(mathe
+  #        PRIVATE -MTd)
+  #    target_compile_options(test_addieren
+  #        PRIVATE -MTd)
+  #endif()
   
   include(GoogleTest)
   gtest_discover_tests(test_addieren)
