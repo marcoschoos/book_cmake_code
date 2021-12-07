@@ -39,13 +39,13 @@ jobs:
       with:
         submodules: recursive
     
-    - name: Install doxygen
-      run: |
-        ${{ matrix.config.doxygen_install }}
-        
     - name: Install glib
       run: |
         ${{ matrix.config.glib_install }}
+        
+    - name: Install doxygen
+      run: |
+        ${{ matrix.config.doxygen_install }}
         
     - name: Install boost
       uses: MarkusJx/install-boost@v2.0.0
