@@ -17,21 +17,21 @@ jobs:
             cc: "cl", cxx: "cl",
             environment_script: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Auxiliary/Build/vcvars64.bat",
             doxygen_install: choco install doxygen.install,
-            glib-install: choco install gtk-runtime
+            glib_install: scripts/install_glib_win.sh
           }
         - {
             name: "Ubuntu Latest GCC", artifact: "Linux.7z",
             os: ubuntu-latest,
             cc: "gcc", cxx: "g++",
             doxygen_install: sudo apt-get install doxygen,
-            glib-install: sudo apt-get install libgtk2.0-dev
+            glib_install: sudo apt-get install libgtk2.0-dev
           }
         - {
             name: "macOS Latest Clang", artifact: "macOS.7z",
             os: macos-latest,
             cc: "clang", cxx: "clang++",
             doxygen_install: brew install doxygen,
-            glib-install: brew install glib
+            glib_install: brew install glib
           }
 
     steps:    
@@ -45,7 +45,7 @@ jobs:
         
     - name: Install glib
       run: |
-        ${{ matrix.config.glib-install }}
+        ${{ matrix.config.glib_install }}
         
     - name: Install boost
       uses: MarkusJx/install-boost@v2.0.0
