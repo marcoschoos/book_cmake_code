@@ -1,12 +1,14 @@
+#include <glib.h>
 #include <iostream>
-#include <libxml/DOCBparser.h>
 
 int main()
 {
-    // Parse the file
-    DomParser parser;
-    parser.parse_file("file.xml");
-    Node* rootNode = parser.get_document()->get_root_node();
+    char text[] = "Hello world!";
+
+    GList* liste = nullptr;
+    liste = g_list_append(liste, text);
+
+    std::cout << "Liste hat eine Länge von: " << g_list_length(liste) << std::endl;
 
     return 0;
 }

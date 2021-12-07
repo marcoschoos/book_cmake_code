@@ -7,18 +7,22 @@ project(code_9-6
 include(CMakePrintHelpers)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
-find_package(LibXml2 REQUIRED)
+find_package(GLIB2 REQUIRED)
 
-cmake_print_variables(PC_LIBXML_INCLUDE_DIRS)
+cmake_print_variables(PKG_GLIB2_INCLUDEDIR)
+cmake_print_variables(PKG_GLIB2_INCLUDE_DIRS)
 
-add_executable(libxml2_test main.cpp)
+cmake_print_variables(PKG_GLIB2_LIBDIR)
+cmake_print_variables(PKG_GLIB2_LIBRARY_DIRS)
 
-target_link_libraries(libxml2_test
+cmake_print_variables(PKG_GLIB2_LIBRARIES)
+
+cmake_print_variables(GLIB2_INCLUDE_DIRS)
+cmake_print_variables(GLIB2_LIBRARIES)
+
+add_executable(glib2_test main.cpp)
+
+target_link_libraries(glib2_test
     PRIVATE 
-    ${LIBXML2_LIBRARY}
-    )
-    
-target_include_directories(libxml2_test
-    PRIVATE
-    ${LIBXML2_INCLUDE_DIRS}
+    GLIB2::GLIB2
     )
