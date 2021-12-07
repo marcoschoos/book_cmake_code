@@ -44,6 +44,7 @@ jobs:
         ${{ matrix.config.doxygen_install }}
         
     - name: Install glib
+      async: True
       run: |
         ${{ matrix.config.glib_install }}
         
