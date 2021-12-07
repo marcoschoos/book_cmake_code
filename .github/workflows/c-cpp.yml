@@ -223,6 +223,22 @@ jobs:
         cmake --build .
       env:
         BOOST_ROOT: ${{ steps.install-boost.outputs.BOOST_ROOT }}
+        
+    - name: build_code_9.5
+      working-directory: Kapitel_9/Code_9.5/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_9.6
+      working-directory: Kapitel_9/Code_9.6/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
     
     - name: build_code_10.1
       working-directory: Kapitel_10/Code_10.1/
