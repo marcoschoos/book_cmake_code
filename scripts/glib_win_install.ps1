@@ -4,7 +4,7 @@ cd glib
 git checkout glib-2-70
 choco install ninja
 pip3 install --user meson
-c:\Windows\py.exe %LOCALAPPDATA%\AppData\Roaming\Python\Python37\Scripts\meson.py
+echo "C:\Users\runneradmin\AppData\Roaming\Python\Python37\Scripts" >> $GITHUB_PATH
 meson _build
 
 ninja -C _build
