@@ -16,32 +16,25 @@ jobs:
             os: windows-latest,
             cc: "cl", cxx: "cl",
             environment_script: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Auxiliary/Build/vcvars64.bat",
-            doxygen_install: choco install doxygen.install,
-            glib_install: ./scripts/glib_win_install.ps1
+            doxygen_install: choco install doxygen.install
           }
         - {
             name: "Ubuntu Latest GCC", artifact: "Linux.7z",
             os: ubuntu-latest,
             cc: "gcc", cxx: "g++",
-            doxygen_install: sudo apt-get install doxygen,
-            glib_install: echo Already installed
+            doxygen_install: sudo apt-get install doxygen
           }
         - {
-            name: "macOS Latest Clang", artifact: "macOS.7z",
+            name: "macOS Latest Clang", artifact: "macOS.7z"
             os: macos-latest,
             cc: "clang", cxx: "clang++",
             doxygen_install: brew install doxygen,
-            glib_install: brew install glib
           }
 
     steps:    
     - uses: actions/checkout@v2
       with:
         submodules: recursive
-        
-    - name: Install glib
-      run: |
-        ${{ matrix.config.glib_install }}
         
     - name: Install doxygen
       run: |
