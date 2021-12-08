@@ -28,7 +28,7 @@ jobs:
             name: "macOS Latest Clang", artifact: "macOS.7z"
             os: macos-latest,
             cc: "clang", cxx: "clang++",
-            doxygen_install: brew install doxygen,
+            doxygen_install: brew install doxygen
           }
 
     steps:    
@@ -226,14 +226,6 @@ jobs:
         
     - name: build_code_9.5
       working-directory: Kapitel_9/Code_9.5/
-      run: |
-        mkdir build
-        cd build
-        cmake ..
-        cmake --build .
-        
-    - name: build_code_9.6
-      working-directory: Kapitel_9/Code_9.6/
       run: |
         mkdir build
         cd build
