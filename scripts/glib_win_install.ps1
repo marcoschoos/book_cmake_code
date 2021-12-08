@@ -1,6 +1,6 @@
 git clone https://gitlab.gnome.org/GNOME/glib.git
 
-echo "C:\Users\runneradmin\AppData\Roaming\Python\Python37\Scripts" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+set PATH=%PATH%;C:\Users\runneradmin\AppData\Roaming\Python\Python37\Scripts
 
 cd glib
 git checkout glib-2-70
