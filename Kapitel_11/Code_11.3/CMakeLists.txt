@@ -30,7 +30,7 @@ if(${BUILD_TESTING})
 
   list(
     APPEND 
-      CMAKE_MODULE_PATH ${catch_SOURCE_DIR}/contrib}
+      CMAKE_MODULE_PATH "${catch_SOURCE_DIR}/contrib"}
     )
   include(Catch)
   catch_discover_tests(addieren)
