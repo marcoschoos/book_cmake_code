@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 3.7...3.19)
 
-project(code_9-1
-    LANGUAGES CXX
-    )
+project(code_9-1 LANGUAGES CXX)
  
 include(CMakePrintHelpers)
  
@@ -27,4 +25,3 @@ cmake_print_properties(
     PROPERTIES
         CXX_STANDARD CXX_STANDARD_REQUIRED
     )
-
