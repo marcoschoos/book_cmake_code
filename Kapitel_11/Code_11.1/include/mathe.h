@@ -1,3 +1,6 @@
+#ifndef MATHE_H
+#define MATHE_H
+
 /** @brief Klasse für mathematische Operationen
  *
  *  Detaillierte Beschreibung der Klasse
@@ -32,3 +35,5 @@ public:
      */
     int rechteck_umfang(int a, int b);
 };
+
+#endif // MATHE_H

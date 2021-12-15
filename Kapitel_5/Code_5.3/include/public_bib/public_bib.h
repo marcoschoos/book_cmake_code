@@ -1,3 +1,6 @@
+#ifndef PUBLICBIB_H
+#define PUBLICBIB_H
+
 #include <vector>
 
 class Haus {
@@ -16,3 +19,5 @@ private:
 
     std::vector<Zimmer> zimmer_vec_;
 };
+
+#endif // PUBLICBIB_H

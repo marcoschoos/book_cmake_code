@@ -1,3 +1,6 @@
+#ifndef MAINBIB_H
+#define MAINBIB_H
+
 #include "public_bib.h"
 #include <vector>
 
@@ -9,3 +12,5 @@ public:
 private:
     std::vector<Haus> haus_vec_;
 };
+
+#endif // MAINBIB_H

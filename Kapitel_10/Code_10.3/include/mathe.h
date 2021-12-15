@@ -1,12 +1,11 @@
+#ifndef MATHE_H
+#define MATHE_H
+
 class Mathe {
-public:
-    int addieren(int a, int b);
-    int addieren_advanced(int a, int b, int c);
-
-    int subtrahieren(int a, int b);
-    int subtrahieren_advanced(int a, int b, int c);
-
-    int addieren_subtrahieren(int a, int b, int c);
-
-    int multiplizieren(int a, int b);
+    public:
+        int addieren(int a, int b);
+        int rechteck_flaeche(int a, int b);
+        int rechteck_umfang(int a, int b);
 };
+
+#endif // MATHE_H
