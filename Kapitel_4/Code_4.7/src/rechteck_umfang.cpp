@@ -12,7 +12,8 @@ SCENARIO("Berechnung eines Rechteckumfangs") {
       int aa = mathe.rechteck_umfang(a, a);
       int bb = mathe.rechteck_umfang(b, b);
 
-      THEN("Sollte der korrekte Umfang des Rechtecks berechnet werden") {
+      THEN("Sollte der korrekte Umfang des Rechtecks "
+           "berechnet werden") {
         REQUIRE(ab == 12);
         REQUIRE(aa == 16);
         REQUIRE(bb == 8);

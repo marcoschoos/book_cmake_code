@@ -10,7 +10,8 @@ void mathe_funktion(int i) {
 }
 
 int main() {
-  auto startzeit = std::chrono::high_resolution_clock::now();
+  auto startzeit =
+      std::chrono::high_resolution_clock::now();
 
   for (size_t i = 0; i < 1e7; i++) {
     mathe_funktion(i);
@@ -31,7 +32,8 @@ int main() {
   auto endzeit = std::chrono::high_resolution_clock::now();
   std::chrono::duration<double> dauer = endzeit - startzeit;
 
-  std::cout << "Die for-Schleife lief: " << dauer.count() << " s\n";
+  std::cout << "Die for-Schleife lief: " << dauer.count()
+            << " s\n";
 
   return 0;
 }

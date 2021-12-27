@@ -13,7 +13,8 @@ SCENARIO("Addieren zweier Integers") {
       int aa = mathe.addieren(a, a);
       int bb = mathe.addieren(b, b);
 
-      THEN("Sollte die Summe der beiden Variablen zurückgegeben werden") {
+      THEN("Sollte die Summe der beiden Variablen "
+           "zurückgegeben werden") {
         REQUIRE(ab == 6);
         REQUIRE(aa == 8);
         REQUIRE(bb == 4);

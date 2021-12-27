@@ -2,7 +2,9 @@
 
 int Haus::rechteck_flaeche(int a, int b) { return a * b; }
 
-int Haus::rechteck_umfang(int a, int b) { return 2 * (a + b); }
+int Haus::rechteck_umfang(int a, int b) {
+  return 2 * (a + b);
+}
 
 void Haus::add_zimmer(int laenge, int breite) {
   Zimmer zimmer;
@@ -11,4 +13,6 @@ void Haus::add_zimmer(int laenge, int breite) {
   zimmer_vec_.push_back(zimmer);
 }
 
-std::vector<Haus::Zimmer> Haus::get_zimmer_vec() { return zimmer_vec_; }
+std::vector<Haus::Zimmer> Haus::get_zimmer_vec() {
+  return zimmer_vec_;
+}

@@ -7,8 +7,8 @@ int main() {
   GList *liste = nullptr;
   liste = g_list_append(liste, text);
 
-  std::cout << "Liste hat eine Länge von: " << g_list_length(liste)
-            << std::endl;
+  std::cout << "Liste hat eine Länge von: "
+            << g_list_length(liste) << std::endl;
 
   return 0;
 }

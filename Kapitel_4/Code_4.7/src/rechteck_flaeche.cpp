@@ -13,7 +13,8 @@ SCENARIO("Berechnung einer Rechteckfläche") {
       int aa = mathe.rechteck_flaeche(a, a);
       int bb = mathe.rechteck_flaeche(b, b);
 
-      THEN("Sollte die korrekte Fläche des Rechtecks berechnet werden") {
+      THEN("Sollte die korrekte Fläche des Rechtecks "
+           "berechnet werden") {
         REQUIRE(ab == 8);
         REQUIRE(aa == 16);
         REQUIRE(bb == 4);

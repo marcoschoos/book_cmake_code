@@ -3,8 +3,8 @@
 
 int main() {
   std::cout << "Dateigröße main.cpp: "
-            << boost::filesystem::file_size("../main.cpp") << " bytes"
-            << std::endl;
+            << boost::filesystem::file_size("../main.cpp")
+            << " bytes" << std::endl;
 
 #ifdef OpenCV_FOUND
   std::cout << "OpenCV found." << std::endl;

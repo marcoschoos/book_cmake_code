@@ -1,5 +1,5 @@
 ﻿---
-ColumnLimit: '120'
+ColumnLimit: '60'
 Cpp11BracedListStyle: 'true'
 IndentWidth: '2'
 SpacesInSquareBrackets: 'false'
