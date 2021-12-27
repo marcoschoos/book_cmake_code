@@ -2,15 +2,13 @@
 
 #include <iostream>
 
-int main()
-{
-    Mathe math;
+int main() {
+  Mathe math;
 
-    if (math.addieren(2, 3) == 5) {
-        std::cout << "Test erfolgreich" 
-                  << std::endl;
-        return 0;
-    }
+  if (math.addieren(2, 3) == 5) {
+    std::cout << "Test erfolgreich" << std::endl;
+    return 0;
+  }
 
-    return 1;
+  return 1;
 }

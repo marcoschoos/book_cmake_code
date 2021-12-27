@@ -25,18 +25,15 @@ add_library(
 
 target_include_directories(
   main_bib 
-  PUBLIC 
-  include/main_bib
+  PUBLIC include/main_bib
   )
 target_include_directories(
   public_bib 
-  PUBLIC 
-  include/public_bib
+  PUBLIC include/public_bib
   )
 target_include_directories(
   private_bib 
-  PUBLIC
-  include/private_bib
+  PUBLIC include/private_bib
   )
 
 target_link_libraries(

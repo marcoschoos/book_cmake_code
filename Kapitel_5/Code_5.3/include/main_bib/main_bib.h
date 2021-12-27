@@ -4,13 +4,13 @@
 #include "public_bib.h"
 #include <vector>
 
-class Stadt{
+class Stadt {
 public:
-    void add_haus(Haus haus);
-    void ausgabe_ew();
+  void add_haus(Haus haus);
+  void ausgabe_ew();
 
 private:
-    std::vector<Haus> haus_vec_;
+  std::vector<Haus> haus_vec_;
 };
 
 #endif // MAINBIB_H

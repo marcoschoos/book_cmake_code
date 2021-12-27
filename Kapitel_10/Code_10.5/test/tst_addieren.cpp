@@ -3,33 +3,28 @@
 
 #include "mathe.h"
 
-TEST_CASE("Rechtecksfläche berechnen", "[flaeche]")
-{
-    Mathe mathe;
+TEST_CASE("Rechtecksfläche berechnen", "[flaeche]") {
+  Mathe mathe;
 
-    REQUIRE(mathe.rechteck_flaeche(1, 5) == 5);
-    REQUIRE(mathe.rechteck_flaeche(7, 3) == 21);
+  REQUIRE(mathe.rechteck_flaeche(1, 5) == 5);
+  REQUIRE(mathe.rechteck_flaeche(7, 3) == 21);
 }
 
-SCENARIO("Addition zweier Integers", "[addieren]")
-{
-    GIVEN("Zwei Integer Variablen")
-    {
-        int a = 4;
-        int b = 2;
-        WHEN("Addition der beiden Variablen")
-        {
-            Mathe mathe;
-            int ab = mathe.addieren(a, b);
-            int aa = mathe.addieren(a, a);
-            int bb = mathe.addieren(b, b);
+SCENARIO("Addition zweier Integers", "[addieren]") {
+  GIVEN("Zwei Integer Variablen") {
+    int a = 4;
+    int b = 2;
+    WHEN("Addition der beiden Variablen") {
+      Mathe mathe;
+      int ab = mathe.addieren(a, b);
+      int aa = mathe.addieren(a, a);
+      int bb = mathe.addieren(b, b);
 
-            THEN("Korrekte Summe wird berechnet")
-            {
-                REQUIRE(ab == 6);
-                REQUIRE(aa == 8);
-                REQUIRE(bb == 4);
-            }
-        }
+      THEN("Korrekte Summe wird berechnet") {
+        REQUIRE(ab == 6);
+        REQUIRE(aa == 8);
+        REQUIRE(bb == 4);
+      }
     }
+  }
 }

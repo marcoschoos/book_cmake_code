@@ -1,0 +1,8 @@
+﻿---
+ColumnLimit: '120'
+Cpp11BracedListStyle: 'true'
+IndentWidth: '2'
+SpacesInSquareBrackets: 'false'
+UseTab: Never
+
+...

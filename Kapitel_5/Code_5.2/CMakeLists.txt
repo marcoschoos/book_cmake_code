@@ -9,6 +9,5 @@ add_library(
   ) 
 target_include_directories(
   mathe
-  PUBLIC 
-  include
+  PUBLIC include
   )
