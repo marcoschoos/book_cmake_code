@@ -1,5 +1,5 @@
 cmake_minimum_required(
-  VERSION 3.12...3.19
+  VERSION 3.12...3.22
   FATAL_ERROR
   )
 

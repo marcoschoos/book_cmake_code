@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.7...3.19)
+cmake_minimum_required(VERSION 3.7...3.22)
 
 if(${CMAKE_VERSION} VERSION_LESS 3.12)
   cmake_policy(VERSION ${CMAKE_VERSION})

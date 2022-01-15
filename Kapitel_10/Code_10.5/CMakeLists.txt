@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14...3.19)
+cmake_minimum_required(VERSION 3.14...3.22)
 
 project(code_10-5 LANGUAGES CXX)
 
