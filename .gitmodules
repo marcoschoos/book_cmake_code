@@ -15,3 +15,6 @@
 [submodule "Kapitel_9/Code_9.5/libs/GSL"]
 	path = Kapitel_9/Code_9.5/libs/GSL
 	url = https://github.com/microsoft/GSL
+[submodule "Kapitel_4/Code_4.7/libs/Catch2"]
+	path = Kapitel_4/Code_4.7/libs/Catch2
+	url = https://github.com/catchorg/Catch2
