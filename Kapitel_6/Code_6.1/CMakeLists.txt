@@ -8,13 +8,13 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(build_test main.cpp)
 
-message("ENV Flags: " $ENV{CXXFLAGS})
-message("Standard Flags: " ${CMAKE_CXX_FLAGS})
-message("Debug Flags: " ${CMAKE_CXX_FLAGS_DEBUG})
-message("Release Flags: " ${CMAKE_CXX_FLAGS_RELEASE})
+message("ENV Flags: $ENV{CXXFLAGS}")
+message("Standard Flags: ${CMAKE_CXX_FLAGS}")
+message("Debug Flags: ${CMAKE_CXX_FLAGS_DEBUG}")
+message("Release Flags: ${CMAKE_CXX_FLAGS_RELEASE}")
 message("MinSizeRel Flags: "
-        ${CMAKE_CXX_FLAGS_MINSIZEREL}
+        "${CMAKE_CXX_FLAGS_MINSIZEREL}"
         )
 message("RelWithDebInfo Flags: "
-        ${CMAKE_CXX_FLAGS_RELWITHDEBINFO}
+        "${CMAKE_CXX_FLAGS_RELWITHDEBINFO}"
         )
