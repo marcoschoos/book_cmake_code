@@ -1,5 +1,5 @@
 [submodule "Kapitel_4/Code_4.6/libs/Catch2"]
-	path = Kapitel_4/Code_4.5/Code_4.6/libs/Catch2
+	path = Kapitel_4/Code_4.5/libs/Catch2
 	url = https://github.com/catchorg/Catch2
 [submodule "Kapitel_10/Code_10.4/libs/googletest"]
 	path = Kapitel_10/Code_10.4/libs/googletest
