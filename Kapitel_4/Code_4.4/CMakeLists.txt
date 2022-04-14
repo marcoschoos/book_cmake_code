@@ -1,30 +1,19 @@
-cmake_minimum_required(VERSION 3.5...3.19)
+cmake_minimum_required(VERSION 3.7...3.22)
 
-if (${CMAKE_VERSION} VERSION_LESS 3.12)
-    cmake_policy(VERSION ${CMAKE_VERSION})
+if(${CMAKE_VERSION} VERSION_LESS 3.12)
+  cmake_policy(VERSION ${CMAKE_VERSION})
 endif()
 
-project(hello_world_project
-    LANGUAGES CXX
-    VERSION 1.0.0
-    )
+project(code_4-4 LANGUAGES CXX)
 
 add_executable(hello_world main.cpp)
 
-if(CMAKE_GENERATOR STREQUAL "Xcode")
-    message(STATUS "CMake Generator ist Xcode")
-elseif(CMAKE_GENERATOR STREQUAL "Unix Makefiles")
-    message(STATUS "CMake Generator ist Unix Makefiles")
+if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Linux")
+  message("Konfiguration auf Linux")
+elseif(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Darwin")
+  message("Konfiguration auf macOS")
+elseif(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Windows")
+  message("Konfiguration auf Windows")
 else()
-    message(STATUS "CMake Generator ist ${CMAKE_GENERATOR}")
-endif()
-
-if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
-  message(STATUS "Konfiguration auf Linux")
-elseif(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
-  message(STATUS "Konfiguration auf macOS")
-elseif(CMAKE_SYSTEM_NAME STREQUAL "Windows")
-  message(STATUS "Konfiguration auf Windows")
-else()
-  message(STATUS "Konfiguration auf ${CMAKE_SYSTEM_NAME}")
+  message("Konfiguration auf ${CMAKE_HOST_SYSTEM_NAME}")
 endif()

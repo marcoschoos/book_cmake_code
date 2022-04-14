@@ -1,15 +1,15 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.7...3.22)
 
-project(hello_world_project 
-    LANGUAGES CXX
+project(code_4-2 LANGUAGES CXX)
+
+set(BUILD_EXECUTABLE
+    TRUE
+    CACHE BOOL 
+    "Erzeugt ein zweite ausführbare Datei."
     )
-    
-set(BUILD_EXECUTABLE TRUE CACHE BOOL 
-    "Falls true, wird eine zweite ausführbare Datei erzeugt"
-    ) 
 
 add_executable(hello_world main.cpp)
 
-if (${BUILD_EXECUTABLE})
-    add_executable(hello_world_2 main.cpp)
+if(${BUILD_EXECUTABLE})
+  add_executable(hello_world_2 main.cpp)
 endif()

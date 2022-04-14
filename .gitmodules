@@ -1,0 +1,17 @@
+[submodule "Kapitel_4/Code_4.6/libs/Catch2"]
+	path = Kapitel_4/Code_4.5/libs/Catch2
+	url = https://github.com/catchorg/Catch2
+[submodule "Kapitel_10/Code_10.4/libs/googletest"]
+	path = Kapitel_10/Code_10.4/libs/googletest
+	url = https://github.com/google/googletest
+	branch = master
+[submodule "Kapitel_10/Code_10.5/libs/Catch2"]
+	path = Kapitel_10/Code_10.5/libs/Catch2
+	url = https://github.com/catchorg/Catch2
+	branch = v2.x
+[submodule "Kapitel_9/Code_9.5/libs/GSL"]
+	path = Kapitel_9/Code_9.5/libs/GSL
+	url = https://github.com/microsoft/GSL
+[submodule "Kapitel_4/Code_4.7/libs/Catch2"]
+	path = Kapitel_4/Code_4.6/libs/Catch2
+	url = https://github.com/catchorg/Catch2

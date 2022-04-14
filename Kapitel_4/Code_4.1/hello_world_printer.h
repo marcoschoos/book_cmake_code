@@ -1,6 +1,6 @@
-#ifndef HELLO_WORLD_PRINTER_H
-#define HELLO_WORLD_PRINTER_H
+#ifndef HELLOWORLDPRINTER_H
+#define HELLOWORLDPRINTER_H
 
 void print_hello_world();
 
-#endif // HELLO_WORLD_PRINTER_H
+#endif // HELLOWORLDPRINTER_H

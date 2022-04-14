@@ -15,26 +15,41 @@ jobs:
             name: "Windows Latest MSVC", artifact: "Windows-MSVC.7z",
             os: windows-latest,
             cc: "cl", cxx: "cl",
-            environment_script: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Auxiliary/Build/vcvars64.bat"
-          }
-        - {
-            name: "Windows Latest MinGW", artifact: "Windows-MinGW.7z",
-            os: windows-latest,
-            cc: "gcc", cxx: "g++"
+            environment_script: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Auxiliary/Build/vcvars64.bat",
+            doxygen_install: choco install doxygen.install
           }
         - {
             name: "Ubuntu Latest GCC", artifact: "Linux.7z",
             os: ubuntu-latest,
-            cc: "gcc", cxx: "g++"
+            cc: "gcc", cxx: "g++",
+            doxygen_install: sudo apt-get install doxygen
           }
         - {
             name: "macOS Latest Clang", artifact: "macOS.7z",
             os: macos-latest,
-            cc: "clang", cxx: "clang++"
+            cc: "clang", cxx: "clang++",
+            doxygen_install: brew install doxygen
           }
 
     steps:    
     - uses: actions/checkout@v2
+      with:
+        submodules: recursive
+    
+    - name: Check cmake version
+      run: |
+        cmake --version
+        
+    - name: Install doxygen
+      run: |
+        ${{ matrix.config.doxygen_install }}
+        
+    - name: Install boost
+      uses: MarkusJx/install-boost@v2.0.0
+      id: install-boost
+      with:
+        boost_version: 1.73.0
+        
     - name: build_code_3.1
       working-directory: Kapitel_3/Code_3.1/
       run: |
@@ -57,7 +72,7 @@ jobs:
         mkdir build
         cd build
         cmake ..
-        cmake --build .
+        cmake --build . -t hello_world
     
     - name: build_code_4.1
       working-directory: Kapitel_4/Code_4.1/
@@ -85,6 +100,197 @@ jobs:
         
     - name: build_code_4.4
       working-directory: Kapitel_4/Code_4.4/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_4.5
+      working-directory: Kapitel_4/Code_4.5/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_4.6
+      working-directory: Kapitel_4/Code_4.6/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_5.1
+      working-directory: Kapitel_5/Code_5.1/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_5.2
+      working-directory: Kapitel_5/Code_5.2/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_5.3
+      working-directory: Kapitel_5/Code_5.3/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+    
+    - name: build_code_6.1
+      working-directory: Kapitel_6/Code_6.1/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_7.1
+      working-directory: Kapitel_7/Code_7.1/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_7.2
+      working-directory: Kapitel_7/Code_7.2/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_7.3
+      working-directory: Kapitel_7/Code_7.3/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_8.1
+      working-directory: Kapitel_8/Code_8.1/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_9.1
+      working-directory: Kapitel_9/Code_9.1/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_9.2
+      working-directory: Kapitel_9/Code_9.2/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_9.3
+      working-directory: Kapitel_9/Code_9.3/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_9.4
+      working-directory: Kapitel_9/Code_9.4/
+      run: |
+        mkdir build
+        cd build
+        cmake -DBoost_COMPILER=-vc141 -DBoost_LIBRARY_DIRS="${{steps.install-boost.outputs.BOOST_ROOT}}/lib" ..
+        cmake --build .
+      env:
+        BOOST_ROOT: ${{ steps.install-boost.outputs.BOOST_ROOT }}
+        
+    - name: build_code_9.5
+      working-directory: Kapitel_9/Code_9.5/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+    
+    - name: build_code_10.1
+      working-directory: Kapitel_10/Code_10.1/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        ctest -C Debug
+        
+    - name: build_code_10.2
+      working-directory: Kapitel_10/Code_10.2/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_10.3
+      working-directory: Kapitel_10/Code_10.3/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        ctest -C Debug
+        
+    - name: build_code_10.4
+      working-directory: Kapitel_10/Code_10.4/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        ctest -C Debug
+        
+    - name: build_code_10.5
+      working-directory: Kapitel_10/Code_10.5/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        ctest -C Debug
+        
+    - name: build_code_11.1
+      working-directory: Kapitel_11/Code_11.1/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        cmake --build . --target erstelle_doku
+                
+    - name: build_code_11.2
+      working-directory: Kapitel_11/Code_11.2/
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+        
+    - name: build_code_11.3
+      working-directory: Kapitel_11/Code_11.3/
       run: |
         mkdir build
         cd build

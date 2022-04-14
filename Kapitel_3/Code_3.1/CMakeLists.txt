@@ -1,7 +1,11 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.7)
 
-project(hello_world_project 
-    LANGUAGES CXX
-    )
+project(
+  code_3-1
+  LANGUAGES CXX
+  )
 
-add_executable(hello_world main.cpp)
+add_executable(
+  hello_world
+  main.cpp
+  )
