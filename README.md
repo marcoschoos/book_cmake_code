@@ -1,6 +1,6 @@
 # CMake für Einsteiger
 
-In diesem Repository finden Sie den Code aus dem Buch "CMake für Einsteiger" von Marco Schoos. Im Buch selbst ist der Aufbau dieses Repositories und wie Sie den Code auf Ihrem Rechner ausführen können erläutert. Sie finden im Folgenden noch einmal meine Kontaktdaten, falls es Probleme geben sollte, sowie das Quellenverzeichnis.
+In diesem Repository finden Sie den Code aus dem Buch "CMake für Einsteiger" von Marco Schoos. Im Buch selbst ist der Aufbau dieses Repositorys und wie Sie den Code auf Ihrem Rechner ausführen können, erläutert. Sie finden im Folgenden noch einmal meine Kontaktdaten, falls es Probleme geben sollte, sowie das Quellenverzeichnis.
 
 ## Kontaktdaten
 
