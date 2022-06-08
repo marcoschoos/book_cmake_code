@@ -13,3 +13,4 @@ message(
 
 add_library(mathe SHARED) 
 target_sources(mathe PRIVATE mathe.cpp)
+target_include_directories(mathe PUBLIC .)

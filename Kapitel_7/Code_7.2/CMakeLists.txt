@@ -18,4 +18,3 @@ message("CU_BINARY_DIR HO: ${CMAKE_CURRENT_BINARY_DIR}")
 
 add_executable(hello_math src/main.cpp)
 target_link_libraries(hello_math PRIVATE mathe)
-target_include_directories(hello_math PRIVATE libs/math)

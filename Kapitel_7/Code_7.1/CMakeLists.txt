@@ -12,4 +12,3 @@ message("Minimale CMake Version Hauptordner: "
 
 add_executable(hello_math src/main.cpp)
 target_link_libraries(hello_math PRIVATE mathe)
-target_include_directories(hello_math PRIVATE libs/math)

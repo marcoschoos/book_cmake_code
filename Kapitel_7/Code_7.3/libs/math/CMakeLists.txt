@@ -16,3 +16,7 @@ target_sources(
   mathe 
   PRIVATE ${CMAKE_CURRENT_LIST_DIR}/mathe.cpp
   )
+target_include_directories(
+  mathe 
+  PUBLIC ${CMAKE_CURRENT_LIST_DIR}
+  )
