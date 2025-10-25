@@ -2,6 +2,20 @@
 
 In diesem Repository finden Sie den Code aus dem Buch "CMake für Einsteiger" von Marco Schoos. Im Buch selbst ist der Aufbau dieses Repositorys und wie Sie den Code auf Ihrem Rechner ausführen können, erläutert. Sie finden im Folgenden noch einmal meine Kontaktdaten, falls es Probleme geben sollte, sowie das Quellenverzeichnis.
 
+## Download des Repositories
+
+Achtung! In meinem Buch habe ich leider einen Fehler bei dem `git clone` Befehl auf Seite 15 gemacht. Mit dem Befehl wie er im Buch steht werden leider die submodules nicht korrekt heruntergeladen, die unter anderem in Kapitel 4 verwendet werden. Hier ist der korrekte, vollständige Befehl:
+
+```sh
+git clone --recurse-submodules -j8 https://github.com/marcoschoos/book_cmake_code
+```
+
+Falls Sie das Repository bereits heruntergeladen haben sollten, können Sie die submodules mit dem folgenden Befehl ergänzen. Dazu müssen sie sich im Hauptordner dieses git Repositories befinden.
+
+```sh
+git submodule update --init --recursive
+```
+
 ## Kontaktdaten
 
 Webseite: www.codingwithmagga.com
